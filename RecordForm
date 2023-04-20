@@ -1,11 +1,8 @@
 <aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
 	
-    
     	<lightning:card title="Crie seu Lead">
-        <lightning:recordEditForm aura:id="recordEditForm"
-                           objectApiName="Lead">
+        <lightning:recordEditForm aura:id="recordEditForm" objectApiName="Lead">
         <lightning:messages />
-        
         
         <div class="slds-box slds-theme_default">
         <div class="slds-grid">
