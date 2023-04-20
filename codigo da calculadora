@@ -11,15 +11,16 @@
     
     
     <div class="slds-box slds-theme_default">
+        <h1>Calculadora</h1>
     <lightning:input name="input1" label="digite o primeiro numero" value="{!v.n1}" />
     <lightning:input name="input2" label="digite o segundo numero" value="{!v.n2}" />
     <br/>
     <lightning:buttonGroup>
-        <lightning:button label="Addition" onclick="{!c.Add}" />
-        <lightning:button label="Subtract" onclick="{!c.Sub}" />
-        <lightning:button label="Multiply" onclick="{!c.Mul}" />
-        <lightning:button label="Division" onclick="{!c.Divi}" />
-        <lightning:button label="Clear" onclick="{!c.Clear}" />
+        <lightning:button variant="success" label="Soma" onclick="{!c.Add}" />
+        <lightning:button variant="brand" label="Subtração" onclick="{!c.Sub}" />
+        <lightning:button variant="success" label="Multiplicação" onclick="{!c.Mul}" />
+        <lightning:button variant="brand" label="Divisão" onclick="{!c.Divi}" />
+        <lightning:button variant="destructive" label="Apagar" onclick="{!c.Apagar}" />
     </lightning:buttonGroup>
     
     <br/>
