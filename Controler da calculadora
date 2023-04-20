@@ -1,0 +1,56 @@
+({
+    
+	 Add : function(component, event, helper) {
+        var a = component.get("v.n1");
+        var b = component.get("v.n2");
+        var total = parseInt(a) + parseInt(b);
+        component.set("v.total",total);
+        component.set("v.som",true);
+        component.set("v.sub",false);
+        component.set("v.mult",false);
+        component.set("v.div",false);
+    },
+    
+    Sub : function(component, event, helper) {
+        var a = component.get("v.n1");
+        var b = component.get("v.n2");
+        var total = parseInt(a) - parseInt(b);
+        component.set("v.total",total);
+        component.set("v.som",false);
+        component.set("v.sub",true);
+        component.set("v.mult",false);
+        component.set("v.div",false);
+    },
+    
+    Mul : function(component, event, helper) {
+        var a = component.get("v.n1");
+        var b = component.get("v.n2");
+        var total = parseInt(a) * parseInt(b);
+        component.set("v.total",total);
+        component.set("v.som",false);
+        component.set("v.sub",false);
+        component.set("v.mult",true);
+        component.set("v.div",false);
+    },
+    
+    Divi : function(component, event, helper) {
+        var a = component.get("v.n1");
+        var b = component.get("v.n2");
+        var total = parseInt(a) / parseInt(b);
+        component.set("v.total",total);
+        component.set("v.som",false);
+        component.set("v.sub",false);
+        component.set("v.mult",false);
+        component.set("v.div",true);
+    },
+
+    
+    Clear : function(component, event, helper) {
+        component.set("v.total",0);
+        component.set("v.n1",0);
+        component.set("v.n2",0);
+        component.set("v.som",false);
+        component.set("v.sub",false);
+        component.set("v.mult",false);
+    }
+})
