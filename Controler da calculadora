@@ -45,12 +45,13 @@
     },
 
     
-    Clear : function(component, event, helper) {
+    Apagar : function(component, event, helper) {
         component.set("v.total",0);
         component.set("v.n1",0);
         component.set("v.n2",0);
         component.set("v.som",false);
         component.set("v.sub",false);
         component.set("v.mult",false);
+        component.set("v.div",false);
     }
 })
