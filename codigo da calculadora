@@ -1,0 +1,42 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	
+    <aura:attribute name="n1" type="integer" />
+    <aura:attribute name="n2" type="integer" />
+    <aura:attribute name="total" type="integer" />
+    
+    <aura:attribute name="som" type="boolean" default="false" />
+    <aura:attribute name="sub" type="boolean" default="false" />
+    <aura:attribute name="mult" type="boolean" default="false" />
+    <aura:attribute name="div" type="boolean" default="false" />
+    
+    
+    <div class="slds-box slds-theme_default">
+    <lightning:input name="input1" label="digite o primeiro numero" value="{!v.n1}" />
+    <lightning:input name="input2" label="digite o segundo numero" value="{!v.n2}" />
+    <br/>
+    <lightning:buttonGroup>
+        <lightning:button label="Addition" onclick="{!c.Add}" />
+        <lightning:button label="Subtract" onclick="{!c.Sub}" />
+        <lightning:button label="Multiply" onclick="{!c.Mul}" />
+        <lightning:button label="Division" onclick="{!c.Divi}" />
+        <lightning:button label="Clear" onclick="{!c.Clear}" />
+    </lightning:buttonGroup>
+    
+    <br/>
+    
+    <aura:if isTrue="{!v.som}">
+        a soma entre os numeros é = {!v.total}
+    </aura:if>
+    <aura:if isTrue="{!v.sub}">
+        o valor da subtração é = {!v.total}
+    </aura:if>
+    <aura:if isTrue="{!v.mult}">
+        A multiplicação entre os numeros é = {!v.total}
+    </aura:if>
+    <aura:if isTrue="{!v.div}">
+        A divisão entre o primeiro e o segundo é = {!v.total}
+    </aura:if>
+    
+    </div>
+    
+</aura:component>
