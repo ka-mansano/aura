@@ -1,0 +1,31 @@
+<aura:component implements="force:appHostable, flexipage:availableForAllPageTypes, flexipage:availableForRecordHome, force:hasRecordId" access="global">
+    <aura:attribute name="fields"
+                    type="String[]"
+                    default="['Name','NomeProduto__c', 'DataCompra__c', 'PrecoUnitario__c', 'Quantidade__c', 'PrecoTotal__c']"/>
+	<aura:attribute name="recordId" type="String"/>
+	                
+    <lightning:notificationsLibrary aura:id="notifLib"/>
+    <lightning:card footer="" title="Lista de compras para o escritório">
+    <lightning:recordForm objectApiName="ListaCompra__c"
+                          fields="{!v.fields}"
+                          onsuccess="{!c.handleSuccess}" />
+    </lightning:card>
+</aura:component>
+
+
+({
+    handleSuccess : function(component, event, helper) {
+        component.find('notifLib').showToast({
+            "variant": "success",
+            "title": "Produto adicionado a lista com sucesso!",
+            "message": "Record ID: " + event.getParam("id")
+        });
+    }
+})
+
+
+.THIS {
+    font-size:18px;
+}
+
+
